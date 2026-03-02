@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Profil Usaha Buku</title>
+<link rel="stylesheet" href="style.css" />        
+</head>
+<body>
+    <nav>
+    <a href="index.html">Beranda</a>
+    <a href="produk.html">Produk</a>
+    <a href="bedah-buku.html">Bedah Buku</a>
+    <a href="testimoni.html">Testimoni</a>
+    <a href="tampil-testimoni.html">Testimoni Pembeli</a>   
+    <a href="kontak.html">Kontak</a>
+    <a href="event.html">Event</a>
+    </nav>
+
+      <!-- Content -->
+    <main class="flex-grow container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center text-stone-800 mb-6 tracking-wide">Book Exhibition & Special Discount</h2>
+        <p class="text-center text-stone-600 mb-12 italic">Seoul Book Fair 2026 — 12-18 Mei 2026</p>
+
+        <!-- Countdown -->
+        <div class="bg-white shadow-xl border border-stone-300 p-8 text-center mb-16">
+            <h3 class="text-xl font-bold text-stone-800 mb-4">Countdown to Exhibition</h3>
+            <div id="countdown" class="text-2xl font-semibold text-stone-700 tracking-widest"></div>
+        </div>
+
+        <!-- Book Exhibition Info -->
+        <div class="bg-white p-10 shadow-xl border border-stone-300 mb-16">
+            <h3 class="text-2xl font-bold text-stone-800 mb-4">📚 Event Location</h3>
+            <p class="text-stone-700">COEX Convention Center, Seoul</p>
+            <p class="text-stone-600 italic mt-2">Temukan koleksi pilihan Langit Kata dengan suasana klasik dan diskon spesial selama acara berlangsung.</p>
+        </div>
+
+        <!-- Discount Books -->
+        <h3 class="text-2xl font-bold text-stone-800 mb-10 text-center">Featured Discount Books</h3>
+
+        <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-10">
+
+            <!-- Book 1 -->
+            <div class="bg-white shadow-xl border border-stone-300 p-6 hover:shadow-2xl transition duration-300">
+                <img src="images/images 2.jpg" alt="Si Anak Pintar" class="sampul" height="120" width="120">
+                <h4 class="text-xl font-semibold text-stone-800 text-center">Si Anak Pintar</h4>
+                <p class="text-center text-stone-600">Rp95.000</p>
+                <p class="text-center text-lg font-bold text-stone-800 mb-4">Rp75.000</p>
+                
+            </div>
+
+            <!-- Book 2 -->
+            <div class="bg-white shadow-xl border border-stone-300 p-6 hover:shadow-2xl transition duration-300">
+                <img src="images/images 1.webp" alt="Senja" class="sampul" height="120" width="120"> 
+                <h4 class="text-xl font-semibold text-stone-800 text-center">Senja</h4>
+                <p class="text-center text-stone-600">Rp85.000</p>
+                <p class="text-center text-lg font-bold text-stone-800 mb-4">Rp65.000</p>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="bg-white shadow-xl border border-stone-300 p-6 hover:shadow-2xl transition duration-300">
+                <img src="images/image 3.jpg" alt="Pergi" class="sampul" height="120" width="120">
+                <h4 class="text-xl font-semibold text-stone-800 text-center">Pergi</h4>
+                <p class="text-center text-stone-600">Rp98.000</p>
+                <p class="text-center text-lg font-bold text-stone-800 mb-4">Rp78.000</p>
+                
+            </div>
+
+            <!-- Book 4 -->
+            <div class="bg-white shadow-xl border border-stone-300 p-6 hover:shadow-2xl transition duration-300">
+                <img src="images/images 5.jpg" alt="Loneliness" class="sampul" height="120" width="120">
+                <h4 class="text-xl font-semibold text-stone-800 text-center">Loneliness</h4>
+                <p class="text-center text-stone-600">Rp92.000</p>
+                <p class="text-center text-lg font-bold text-stone-800 mb-4">Rp72.000</p>
+        
+            </div>
+
+            <!-- Book 5 -->
+            <div class="bg-white shadow-xl border border-stone-300 p-6 hover:shadow-2xl transition duration-300">
+                <img src="images/images 4.jpg" alt="Insecurity" class="sampul" height="120" width="120">
+                <h4 class="text-xl font-semibold text-stone-800 text-center">Insecurity</h4>
+                <p class="text-center text-stone-600">Rp90.000</p>
+                <p class="text-center text-lg font-bold text-stone-800 mb-4">Rp70.000</p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-stone-200 text-center py-6 mt-10 text-sm tracking-wide">
+        <p>© 2026 Langit Kata — A Quiet Space Between Pages</p>
+    </footer>
+
+    <!-- Countdown Script -->
+    <script>
+        const countdownElement = document.getElementById('countdown');
+        const eventDate = new Date('May 12, 2026 00:00:00').getTime();
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        }, 1000);
+    </script>
+
+</body>
+</html>
